@@ -17,12 +17,11 @@
 - JAVASCRIPT (Vanilla)
 ```
 
----
-
 ## 링크
 
 - [https://kimyang-sun.github.io/shopping-list-basic/](https://kimyang-sun.github.io/shopping-list-basic/)
 
+---
 
 ## 기능 설명
 
