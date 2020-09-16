@@ -21,7 +21,8 @@ function onAddItem() {
     footerInput.focus();
     return;
   } else {
-    createItemHTML(text);
+    const item = createItemHTML(text);
+    itemList.appendChild(item);
   }
   itemList.scrollTop = itemList.scrollHeight;
   footerInput.value = "";
@@ -30,14 +31,15 @@ function onAddItem() {
 
 /* 아이템을 추가하는 함수 */
 function createItemHTML(text) {
-  itemList.innerHTML += `
-  <li class="item">
+  const itemRow = document.createElement("li");
+  itemRow.setAttribute("class", "item");
+  itemRow.innerHTML = `
     <span>${text}</span>
     <button type="button" class="delete-btn far fa-trash-alt">
       <span class="blind">상품삭제</span>
     </button>
-  </li>
   `;
+  return itemRow;
 }
 
 /* 아이템 삭제 */
